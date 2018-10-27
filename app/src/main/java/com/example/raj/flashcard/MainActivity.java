@@ -11,12 +11,13 @@ public class MainActivity extends AppCompatActivity {
     //Takes the data from AddCard and places it in the main code.
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == 100 && requestCode == RESULT_CANCELED) { // this 100 needs to match the 100 we used when we called startActivityForResult!
+        if (requestCode == 100 ) { // this 100 needs to match the 100 we used when we called startActivityForResult!
             String string1 = data.getExtras().getString("string1"); // 'string1' needs to match the key we used when we put the string in the Intent
             String string2 = data.getExtras().getString("string2");
             ((TextView) findViewById(R.id.flashCardAnswer)).setText(string1);
             ((TextView) findViewById(R.id.textView2)).setText(string2);
         }
+
         findViewById(R.id.rootView).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, AddCard.class);
+                intent.putExtra("stringKey1", ((TextView) findViewById(R.id.flashCardAnswer)).getText().toString());
+                intent.putExtra("stringKey2", ((TextView) findViewById(R.id.textView2)).getText().toString());
                 MainActivity.this.startActivityForResult(intent, 100);
             }
         });
