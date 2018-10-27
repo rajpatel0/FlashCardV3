@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -18,9 +18,10 @@
         android:id="@+id/flashCardAnswer"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="108dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="107dp"
         android:text="WAR, what is it good for?"
         android:textAlignment="center"
         android:textColor="@android:color/black"
@@ -30,12 +31,24 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="200sp"
-        android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/flashCardAnswer"
+        android:layout_alignParentStart="true"
         android:text="ABSOLUTELY NOTHING!"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="40sp"
         android:visibility="invisible" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/pluscircle" />
+
 
 </RelativeLayout>
