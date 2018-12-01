@@ -50,5 +50,16 @@
         android:clickable="true"
         app:srcCompat="@drawable/pluscircle" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="0dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_iconmonstr_arrow_28" />
+
 
 </RelativeLayout>
